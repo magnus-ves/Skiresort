@@ -9,7 +9,7 @@ Et nettleserspill der du bygger og driver ditt eget skisenter – et tycoon- og 
 * **Tilfeldig fjell** – et generert fjell med skog, steiner, bekker og et tjern.
 * **Velg et ekte sted** – søk etter et stedsnavn eller klikk i kartet, og velg et område på 1, 2 eller 3 km. Høydedata og kartobjekter hentes fra nettet. Med «Ekte skisenter» hentes også eksisterende nedfarter og heiser fra OpenStreetMap.
 
-Bygg heiser (dra fra bunn til topp), tegn nedfarter (vanskelighetsgraden regnes ut fra brattheten), sett opp fasiliteter, ansett folk, sett prisen på heiskortet og åpne sesongen. Sesongen går fra desember til april. Jul, vinterferie og påske gir ekstra mange gjester.
+Bygg heiser (dra fra bunn til topp) – skibånd (magic carpet), koppheis, T-krok, stolheis med fast klype, stolheis med stasjon og gondol – tegn nedfarter (vanskelighetsgraden regnes ut fra brattheten), sett opp fasiliteter, ansett folk, sett prisen på heiskortet og åpne sesongen. Sesongen går fra desember til april. Jul, vinterferie og påske gir ekstra mange gjester.
 
 **Kontroller:** dra for å flytte kartet, rull eller klyp for å zoome. Mellomrom = pause, 1/2/3 = fart, Esc = avbryt verktøy.
 
