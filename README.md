@@ -11,7 +11,9 @@ Et nettleserspill der du bygger og driver ditt eget skisenter – et tycoon- og 
 
 Bygg heiser (dra fra bunn til topp) – skibånd (magic carpet), koppheis, T-krok, stolheis med fast klype, stolheis med stasjon og gondol – tegn nedfarter (vanskelighetsgraden regnes ut fra brattheten), sett opp fasiliteter, ansett folk, sett prisen på heiskortet og åpne sesongen. Sesongen går fra desember til april. Jul, vinterferie og påske gir ekstra mange gjester.
 
-**Kontroller:** dra for å flytte kartet, rull eller klyp for å zoome. Mellomrom = pause, 1/2/3 = fart, Esc = avbryt verktøy.
+**3D og 2D:** spillet vises i 3D som standard, med terreng, trær, heiser, bygninger, gjester, skygger, dag og natt. Knappen **2D/3D** til høyre bytter til et flatt kart ovenfra, som også virker uten nett.
+
+**Kontroller:** dra for å flytte, rull eller klyp for å zoome. I 3D roterer du med høyre museknapp (eller Alt + dra), med to fingre som vris, med Q/E eller med ⟲ ⟳-knappene. ⛰️ endrer vinkelen. Mellomrom = pause, 1/2/3 = fart, Esc = avbryt verktøy.
 
 ## Spillmoduser
 
@@ -22,7 +24,10 @@ Fri modus, eller scenarioer med mål: «Familiebakken», «500 gjester per dag»
 * Høyder: [AWS Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) (Terrarium-format), med [Open-Meteo Elevation API](https://open-meteo.com/en/docs/elevation-api) som reserve.
 * Kartobjekter (skog, vann, bekker, veier, bygninger, fjelltopper, nedfarter og heiser): [Overpass API](https://overpass-api.de/).
 * Stedssøk: [Nominatim](https://nominatim.org/).
-* Kartvelger: [Leaflet](https://leafletjs.com/) med OpenStreetMap-fliser. Leaflet er det eneste eksterne biblioteket, og det lastes fra unpkg først når kartvelgeren åpnes.
+* Kartvelger: [Leaflet](https://leafletjs.com/) med OpenStreetMap-fliser.
+* 3D: [Three.js](https://threejs.org/) r149.
+
+De eksterne bibliotekene er Leaflet og Three.js. Begge lastes fra unpkg først når de trengs.
 
 Nedlastede kart og lagrede spill ligger i nettleserens `localStorage`. Uten nett kan du alltid spille på et tilfeldig fjell.
 
