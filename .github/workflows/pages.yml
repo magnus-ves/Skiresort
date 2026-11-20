@@ -1,0 +1,37 @@
+name: Publiser til GitHub Pages
+# Sjekker spillet for syntaksfeil og publiserer det til GitHub Pages.
+# Pages må slås på én gang: Settings → Pages → Source: «GitHub Actions».
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+
+jobs:
+  bygg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sjekk JavaScript i index.html
+        run: |
+          node -e "const fs=require('fs');const s=fs.readFileSync('index.html','utf8');const m=s.match(/<script>([\s\S]*)<\/script>/);fs.writeFileSync('/tmp/spill.js',m[1]);"
+          node --check /tmp/spill.js || { echo "::error file=index.html::Syntaksfeil i spillet"; exit 1; }
+          echo "Spillet er gyldig."
+      - name: Lag publiseringsmappe
+        run: |
+          mkdir -p _site
+          cp index.html .nojekyll _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+
+  publiser:
+    needs: bygg
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: { name: github-pages, url: '${{ steps.d.outputs.page_url }}' }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
